@@ -1,4 +1,4 @@
-create table notice
+create table NOTICE
 (
     NOTICE_SEQ int auto_increment
         primary key,

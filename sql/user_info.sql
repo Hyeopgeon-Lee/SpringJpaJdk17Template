@@ -1,4 +1,4 @@
-create table user_info
+create table USER_INFO
 (
     USER_ID   varchar(100)  not null
         primary key,

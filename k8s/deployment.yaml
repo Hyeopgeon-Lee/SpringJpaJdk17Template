@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: my-notice
-          image: i
+          image: docker.io/hyeopgeonlee/notice-jdk17:0.0.1
           imagePullPolicy: IfNotPresent
           resources:
             requests:
