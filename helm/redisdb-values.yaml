@@ -1,0 +1,30 @@
+global:
+  redis:
+    password: poly1234
+
+architecture: standalone
+
+master:
+  persistence:
+    enabled: true
+    size: 8Gi
+  extraFlags:
+    - "--requirepass poly1234"
+    - "--maxmemory 100mb"
+    - "--maxmemory-policy allkeys-lru"
+  service:
+    type: NodePort
+    port: 6379
+    nodePorts:
+      redis: 32000
+
+replica:
+  replicaCount: 0
+
+resources:
+  requests:
+    memory: 256Mi
+    cpu: 100m
+  limits:
+    memory: 512Mi
+    cpu: 200m

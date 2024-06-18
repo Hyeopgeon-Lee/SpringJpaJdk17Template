@@ -1,0 +1,21 @@
+architecture: standalone
+auth:
+  enabled: true
+  rootPassword: poly1234
+  username: poly
+  password: poly1234
+  database: myDB
+persistence:
+  enabled: true
+  size: 8Gi
+service:
+  type: NodePort
+  nodePorts:
+    mongodb: ""
+resources:
+  limits:
+    memory: 1Gi
+    cpu: "1"
+  requests:
+    memory: 500Mi
+    cpu: "500m"
