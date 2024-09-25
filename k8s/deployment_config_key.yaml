@@ -45,11 +45,11 @@ spec:
             - name: MARIADB_USER
               valueFrom:
                 secretKeyRef:
-                  name: mariadb-secret
+                  name: poly-secret
                   key: username
             - name: MARIADB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: mariadb-secret
+                  name: poly-secret
                   key: password
       restartPolicy: Always
