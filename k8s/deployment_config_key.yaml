@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-notice-dep
-  namespace: notice
+  namespace: poly
   labels:
     app: my-notice
 spec:
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: my-notice
-          image: docker.io/hyeopgeonlee/notice-jdk17:0.0.1
+          image: docker.io/hyeopgeonlee/notice
           imagePullPolicy: IfNotPresent
           resources:
             requests:

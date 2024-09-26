@@ -1,7 +1,11 @@
+
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: poly-config
+  namespace: poly
 data:
-  mariadb-ip: "10.105.246.237"
+  mariadb-ip: "10.96.124.112"
   mariadb-port: "3306"
+
+
