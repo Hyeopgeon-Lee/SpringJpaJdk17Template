@@ -3,9 +3,9 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: poly-config
-  namespace: poly
+  namespace: kopo-trainee1
 data:
-  mariadb-ip: "10.96.124.112"
+  mariadb-ip: "198.19.160.138"
   mariadb-port: "3306"
 
 

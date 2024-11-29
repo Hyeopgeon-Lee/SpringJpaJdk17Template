@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-notice-dep
-  namespace: poly
+  namespace: kopo-trainee1
   labels:
     app: my-notice
 spec:
@@ -40,7 +40,7 @@ spec:
             - name: MARIADB_PORT
               valueFrom:
                 configMapKeyRef:
-                  name: mariadb-config
+                  name: poly-config
                   key: mariadb-port
             - name: MARIADB_USER
               valueFrom:
