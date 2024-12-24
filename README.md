@@ -62,6 +62,7 @@ mvn clean install
 ```
 
 ### 4. 애플리케이션 실행
+```bash
 mvn spring-boot:run
 ```
 
