@@ -15,12 +15,14 @@
             })
         })
 
-        // 글자 길이를 바이트 단위로 계산
+        // 입력된 문자열의 바이트 단위 계산
         function calculateBytes(str) {
             return [...str].reduce((total, char) => {
-                return total + (char.charCodeAt(0) > 127 ? 2 : 1);
+                const charCode = char.charCodeAt(0);
+                return total + (charCode > 127 ? (charCode > 2047 ? 3 : 2) : 1); // UTF-8 기준 계산
             }, 0);
         }
+
 
         // 공지사항 저장하기
         function doSubmit() {
